@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import { siteConfig } from "@/lib/site";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -11,14 +12,14 @@ const poppins = Poppins({
 });
 
 const siteUrl = "https://headless-tau-drab.vercel.app";
-const siteTitle = "MEF";
-const siteDescription = "Shop the latest arrivals and best sellers from MEF.";
+const siteTitle = siteConfig.name;
+const siteDescription = `Shop the latest arrivals and best sellers from ${siteConfig.name}.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Home | MEF",
-    template: "%s | MEF",
+    default: `Home | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteDescription,
   openGraph: {
@@ -26,14 +27,14 @@ export const metadata: Metadata = {
     description: siteDescription,
     url: siteUrl,
     siteName: siteTitle,
-    images: ["/icon.jpeg"],
+    images: ["/og.jpeg"],
     type: "website",
   },
   twitter: {
     card: "summary",
     title: siteTitle,
     description: siteDescription,
-    images: ["/icon.jpeg"],
+    images: ["/og.jpeg"],
   },
 };
 

@@ -13,7 +13,7 @@ export default function CategoryTiles({ collections }: { collections: Collection
   if (!collections.length) return null;
 
   return (
-    <section className="container py-12">
+    <section id="collections" className="container py-12 scroll-mt-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {collections.map((collection) => (
           <Link

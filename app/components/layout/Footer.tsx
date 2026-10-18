@@ -1,13 +1,14 @@
 // components/Footer.tsx
 import Link from 'next/link';
+import { siteConfig } from '@/lib/site';
 
 const footerColumns = [
   {
     title: 'Shop',
     links: [
-      { label: 'New Arrivals', href: '/collections/new-arrivals' },
-      { label: 'Best Sellers', href: '/collections/best-sellers' },
-      { label: 'Collections', href: '/collections' },
+      { label: 'New Arrivals', href: '/#new-arrivals' },
+      { label: 'Best Sellers', href: '/#best-sellers' },
+      { label: 'Collections', href: '/#collections' },
     ],
   },
   {
@@ -33,10 +34,8 @@ export default function Footer() {
     <footer className="bg-black text-white mt-auto">
       <div className="container py-16 grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
         <div>
-          <span className="font-display text-xl uppercase tracking-wide">Your Store</span>
-          <p className="text-sm text-white/60 mt-3 max-w-xs">
-            Placeholder footer content — swap in real store details, socials, and newsletter signup here.
-          </p>
+          <span className="font-display text-xl uppercase tracking-wide">{siteConfig.name}</span>
+          <p className="text-sm text-white/60 mt-3 max-w-xs">{siteConfig.tagline}</p>
         </div>
 
         {footerColumns.map((column) => (
@@ -57,8 +56,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/45">
-          <span>© {new Date().getFullYear()} Your Store. All rights reserved.</span>
-          <span>Placeholder footer — not final content</span>
+          <span>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</span>
         </div>
       </div>
     </footer>

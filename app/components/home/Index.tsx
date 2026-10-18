@@ -18,11 +18,13 @@ const [newArrivals, bestSellers, featuredCollections, featuredVideo] = await Pro
         <>
             <HeroBanner />
             <ProductRail
+                id="new-arrivals"
                 title="New Arrivals"
                 viewAllHref="/collections/new-arrivals"
                 products={newArrivals}
             />
             <ProductRail
+                id="best-sellers"
                 title="Best Sellers"
                 viewAllHref="/collections/best-sellers"
                 products={bestSellers}

@@ -5,6 +5,8 @@ export const getProductQuery = /* GraphQL */ `
       title
       description
       handle
+      vendor
+      productType
       images(first: 10) {
         edges { node { url altText width height } }
       }
@@ -15,6 +17,8 @@ export const getProductQuery = /* GraphQL */ `
             title
             availableForSale
             price { amount currencyCode }
+            compareAtPrice { amount currencyCode }
+            image { url altText width height }
             selectedOptions { name value }
           }
         }

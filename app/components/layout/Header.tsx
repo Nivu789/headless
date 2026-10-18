@@ -1,11 +1,13 @@
 // components/Header.tsx
 import Link from 'next/link';
+import { siteConfig } from '@/lib/site';
 
 const navLinks = [
-  { label: 'New Arrivals', href: '/collections/new-arrivals' },
-  { label: 'Best Sellers', href: '/collections/best-sellers' },
-  { label: 'Collections', href: '/collections' },
-  { label: 'About', href: '/pages/about' },
+  { label: 'New Arrivals', href: '/#new-arrivals' },
+  { label: 'Best Sellers', href: '/#best-sellers' },
+  { label: 'Collections', href: '/#collections' },
+  { label: 'Reviews', href: '/#reviews' },
+  { label: 'Community', href: '/#community' },
 ];
 
 export default function Header() {
@@ -13,7 +15,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-black text-white">
       <div className="container flex items-center justify-between h-16">
         <Link href="/" className="font-display text-xl uppercase tracking-wide">
-          Your Store
+          {siteConfig.name}
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

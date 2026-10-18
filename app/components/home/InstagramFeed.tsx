@@ -24,7 +24,7 @@ function InstagramGlyph({ className = '' }: { className?: string }) {
 
 export default function InstagramFeed() {
   return (
-    <section className="py-16 md:py-24">
+    <section id="community" className="scroll-mt-16 py-16 md:py-24">
       <div className="container flex items-end justify-between mb-8 gap-4">
         <div>
           <span className="text-xs tracking-[0.25em] uppercase text-[#FF4619]">Community</span>

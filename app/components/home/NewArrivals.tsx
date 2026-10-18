@@ -18,10 +18,12 @@ type Product = {
 };
 
 export default function ProductRail({
+  id,
   title,
   viewAllHref,
   products,
 }: {
+  id?: string;
   title: string;
   viewAllHref: string;
   products: Product[];
@@ -33,7 +35,7 @@ export default function ProductRail({
   };
 
   return (
-    <section className="container py-12">
+    <section id={id} className="container py-12 scroll-mt-16">
       <div className="flex items-baseline justify-between mb-6">
         <div className="flex items-baseline gap-4">
           <h2 className="font-display text-xl uppercase tracking-wide">{title}</h2>

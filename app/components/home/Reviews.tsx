@@ -78,7 +78,7 @@ function ReviewCard({ review }: { review: Review }) {
 
 export default function Reviews() {
   return (
-    <section className="bg-black text-white py-16 md:py-24 overflow-hidden">
+    <section id="reviews" className="scroll-mt-16 bg-black text-white py-16 md:py-24 overflow-hidden">
       <div className="container mb-10">
         <span className="text-xs tracking-[0.25em] uppercase text-[#FF6B3D]">Reviews</span>
         <h2 className="font-display text-3xl md:text-4xl uppercase leading-none mt-2">
